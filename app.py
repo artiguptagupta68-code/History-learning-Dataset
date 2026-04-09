@@ -104,7 +104,7 @@ if "q" in st.session_state:
     'score': 50,
     'engagement_level': "Medium"
 
-
+    }
         difficulty = predict(sample)
 
         st.write("### Result")
