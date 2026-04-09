@@ -93,17 +93,17 @@ if "q" in st.session_state:
         is_correct = evaluate_answer(answer, q['correct_answer'], q['content_type'])
 
         sample = {
-            'age_group': age,
-            'proficiency_level': level,
-            'event_name': q['event_name'],
-            'topic': q['topic'],
-            'difficulty_level': q['difficulty_level'],
-            'content_type': q['content_type'],
-            'accuracy_flag': is_correct,
-            'fast_response': 1,
-            'used_hint': 0,
-            'attempts': 1
-        }
+    'age_group': age,
+    'proficiency_level': level,
+    'topic': q['topic'],
+    'difficulty_level': q['difficulty_level'],
+    'content_type': q['content_type'],
+    'is_correct': is_correct,   
+    'hint_used': 0,
+    'attempts': 1,
+    'score': 50,
+    'engagement_level': "Medium"
+
 
         difficulty = predict(sample)
 
