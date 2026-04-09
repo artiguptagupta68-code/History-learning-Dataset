@@ -98,6 +98,7 @@ if "q" in st.session_state:
     'topic': q['topic'],
     'difficulty_level': q['difficulty_level'],
     'content_type': q['content_type'],
+    'response_time_sec': 10,
     'is_correct': is_correct,   
     'hint_used': 0,
     'attempts': 1,
