@@ -3,7 +3,13 @@ import pandas as pd
 import joblib
 import random
 
-# Load model
+import os
+import urllib.request
+
+if not os.path.exists("model.pkl"):
+    url = "PASTE_DIRECT_DOWNLOAD_LINK"
+    urllib.request.urlretrieve(url, "model.pkl")
+
 bundle = joblib.load("model.pkl")
 model = bundle["model"]
 encoders = bundle["encoders"]
